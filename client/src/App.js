@@ -1,12 +1,20 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import PlayerList from './components/PlayerList';
-import ColorToggle from './components/ColorToggle';
+import {useInvertedColors} from './hooks/useInvertColors';
 
 function App() {
+
+  const [invert, setInvert] = useInvertedColors(false);
+
+    const toggle = e => {
+        e.preventDefault();
+        setInvert(!invert);
+    }
+
   return (
     <div className='App'>
-      <ColorToggle/>
+      <button className='toggle-btn' onClick={toggle}>Invert Colors</button>
       <PlayerList/>
     </div>
   );

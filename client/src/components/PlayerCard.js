@@ -1,7 +1,8 @@
 import React from 'react';
-import '../styles/PlayerCard.css';
+import '../styles/PlayerCard.scss';
 
 const PlayerCard = props => {
+
     return (
         <div className='player-card'>
             <h1>{props.name}</h1>

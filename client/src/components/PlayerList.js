@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import PlayerCard from './PlayerCard';
-import '../styles/PlayerList.css'
+import '../styles/PlayerList.scss'
+
+export let apiData = null;
 
 class PlayerList extends React.Component {
   constructor() {
