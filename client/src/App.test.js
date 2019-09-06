@@ -1,14 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
-import PlayerList, {apiData} from './components/PlayerList';
+import { render } from '@testing-library/react';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders without crashing', () => {
+  render(<App />);
 });
 
-it('gets an array from api', () => {
-  expect(typeof apiData).toBe('Array');
-});
+test('renders PlayerCards', async () => {
+  let { getByText } = render(<App/>);
+  getByText(/[name]/i)
+  getByText(/[country]/i)
+})
+
+test('renders PlayerList component', () => {
+  render(document.querySelector('PlayerList'));
+ })
