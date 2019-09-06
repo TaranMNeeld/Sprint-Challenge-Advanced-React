@@ -4,3 +4,9 @@
     height: 200px;
     margin: 1%;
 }
+
+.inverted-color {
+    background: black;
+    color: white;
+    border: 1px solid white;
+  }
