@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.inverted-color {
+  background: black;
+  color     : white;
+
+  * .player-card {
+    border    : 1px solid white;
+  }
+}
